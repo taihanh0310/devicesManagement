@@ -19,6 +19,7 @@ class CreateDeviceTypesTable extends Migration
     {
         Schema::create('device_types', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name', 255);
             $table->timestamps();
         });
     }
