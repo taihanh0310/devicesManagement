@@ -3,16 +3,15 @@
 namespace App\Models;
 use App\BaseModel;
 
-class Brand extends BaseModel
+class Project extends BaseModel
 {
-    protected $table = 'brands';
+    protected $table = 'projects';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name',
-        'country_name'
+        'name'
     ];
 }

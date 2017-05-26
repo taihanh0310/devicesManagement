@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\BaseModel;
 
 class Role extends BaseModel
 {

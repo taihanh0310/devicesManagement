@@ -3,9 +3,9 @@
 namespace App\Models;
 use App\BaseModel;
 
-class Brand extends BaseModel
+class Department extends BaseModel
 {
-    protected $table = 'brands';
+    protected $table = 'departments';
     /**
      * The attributes that are mass assignable.
      *
@@ -13,6 +13,8 @@ class Brand extends BaseModel
      */
     protected $fillable = [
         'name',
-        'country_name'
+        'short_name',
+        'description',
+        'director_manager_id'
     ];
 }
