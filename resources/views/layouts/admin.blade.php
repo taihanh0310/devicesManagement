@@ -38,10 +38,10 @@
     <body>
         <!-- container section start -->
         <section id="container" class="">
-            
+
             <!-- header -->
-             @include('layouts.header.header')
-             @include('layouts.sidebars.sidebar')
+            @include('layouts.header.header')
+            @include('layouts.sidebars.sidebar')
             <!-- end header -->
             <!--main content start-->
             <section id="main-content">
@@ -81,61 +81,61 @@
         <!-- custom script for this page-->
         {!!Html::script("js/sparkline-chart.js")!!}
         {!!Html::script("js/easy-pie-chart.js")!!}
-       {!!Html::script("js/jquery-jvectormap-1.2.2.min.js")!!}
+        {!!Html::script("js/jquery-jvectormap-1.2.2.min.js")!!}
         {!!Html::script("js/jquery-jvectormap-world-mill-en.js")!!}
         {!!Html::script("js/xcharts.min.js")!!}
         {!!Html::script("js/jquery.autosize.min.js")!!}
-       {!!Html::script("js/jquery.placeholder.min.js")!!}
+        {!!Html::script("js/jquery.placeholder.min.js")!!}
         {!!Html::script("js/gdp-data.js")!!}>	
         {!!Html::script("js/morris.min.js")!!}
         {!!Html::script("js/sparklines.js")!!}	
         {!!Html::script("js/charts.js")!!}
-       {!!Html::script("js/jquery.slimscroll.min.js")!!}
+        {!!Html::script("js/jquery.slimscroll.min.js")!!}
         <script>
 
 //knob
-$(function () {
-    $(".knob").knob({
-        'draw': function () {
-            $(this.i).val(this.cv + '%')
-        }
-    })
-});
+            $(function () {
+                $(".knob").knob({
+                    'draw': function () {
+                        $(this.i).val(this.cv + '%')
+                    }
+                })
+            });
 
 //carousel
-$(document).ready(function () {
-    $("#owl-slider").owlCarousel({
-        navigation: true,
-        slideSpeed: 300,
-        paginationSpeed: 400,
-        singleItem: true
+            $(document).ready(function () {
+                $("#owl-slider").owlCarousel({
+                    navigation: true,
+                    slideSpeed: 300,
+                    paginationSpeed: 400,
+                    singleItem: true
 
-    });
-});
+                });
+            });
 
 //custom select box
 
-$(function () {
-    $('select.styled').customSelect();
-});
+            $(function () {
+                $('select.styled').customSelect();
+            });
 
-/* ---------- Map ---------- */
-$(function () {
-    $('#map').vectorMap({
-        map: 'world_mill_en',
-        series: {
-            regions: [{
-                    values: gdpData,
-                    scale: ['#000', '#000'],
-                    normalizeFunction: 'polynomial'
-                }]
-        },
-        backgroundColor: '#eef3f7',
-        onLabelShow: function (e, el, code) {
-            el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
-        }
-    });
-});
+            /* ---------- Map ---------- */
+            $(function () {
+                $('#map').vectorMap({
+                    map: 'world_mill_en',
+                    series: {
+                        regions: [{
+                                values: gdpData,
+                                scale: ['#000', '#000'],
+                                normalizeFunction: 'polynomial'
+                            }]
+                    },
+                    backgroundColor: '#eef3f7',
+                    onLabelShow: function (e, el, code) {
+                        el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
+                    }
+                });
+            });
 
         </script>
     </body>
