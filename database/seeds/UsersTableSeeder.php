@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
+use App\User as User;
 use Illuminate\Hashing\BcryptHasher;
 
 class UsersTableSeeder extends Seeder
@@ -13,13 +13,13 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name', 
-            'email', 
-            'password',
-            'status',
-            'role_id',
-            'phone_number'
+        User::insert([
+            'name' => 'Nguyen Tai Hanh', 
+            'email' => 'admin@admin.com', 
+            'password' => bcrypt('123456'),
+            'status' => 1,
+            'role_id' => 1,
+            'phone_number' => '01676460626' 
         ]);
     }
 }
