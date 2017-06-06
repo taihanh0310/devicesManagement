@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use App\BaseModel;
+use App\User;
 
 class Role extends BaseModel
 {
@@ -12,6 +13,16 @@ class Role extends BaseModel
      * @var array
      */
     protected $fillable = [
-        'name'
+        'name',
+        'description',
+        'created_by'
     ];
+    
+    /**
+     * Relationship
+     * 
+     */
+    public function users(){
+        return $this->hasMany(User::class, 'role_id', 'id');
+    }
 }
